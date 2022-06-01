@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{ASSIGNMENT-5 \\ PROBABILITY AND RANDOM VARIABLES}  
+\author{MARRI SATHVIKA \\ AI21BTECH11020}
+\date{30th May,2022}
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+\begin{frame}{QUESTION}
+\textbf{Consider the following three events:}\\ (a) At least I six is obtained when six dice are rolled\\ (b) at least 2 sixes are obtained when 12 dice are rolled\\ (c) at least 3 sixes are obtained when 18 dice are rolled.\\Which of these events is more likely? 
+\end{frame}
+
+\begin{frame}{SOLUTION}
+\textbf{Event(a):}\\
+Probability of getting atleast 1 six obtained when six dice are rolled in event-a;\\
+In rolling 6 dice : \\(i) Probability that no six will come out
+\begin{align}
+   Q_0 = (\frac{5}{6})^6 = 0.335 
+\end{align}
+(ii) Probability that 1 six will come out 
+\begin{align}
+   P_a = 1 - Q_0 = 1 - 0.335 = 0.665
+\end{align}
+\end{frame}
+
+\begin{frame}{SOLUTION}
+\textbf{Event(b): }\\
+Probability of getting atleast 2 six obtained when 12 dice are rolled in event-b;\\
+In rolling 12 dice : \\(i) Probability that no six will come out
+\begin{align}
+    Q_0 = (\frac{5}{6})^{12} = 0.112 
+\end{align}
+(ii) Probability that exactly 1 six will come out
+\begin{align}
+   Q_1=(\frac{1}{6})^1 (\frac{5}{6})^{11} \times 12 = 0.269 
+\end{align}
+(iii) Probability that at least 2 sixes will come out
+\begin{align}
+    P_b = 1-Q_0-Q_1
+\end{align}
+\begin{align}
+    P_b = (1 - 0.112 - 0.269) = 0.619
+\end{align}
+\end{frame}
+
+\begin{frame}{SOLUTION}
+Probability of getting atleast 3 six obtained when 18 dice are rolled in event-c;\\
+In rolling 18 dice : \\(i) Probability that no six will come out
+\begin{align}
+   Q_0 = (\frac{5}{6})^{18} = 0.038 
+\end{align}
+(ii) Probability that exactly 1 six will come out
+\begin{align}
+    Q_1 = (\frac{1}{6})^1 (\frac{5}{6})^{17} \times 18 = 0.135
+\end{align}
+(iii)Probability that exactly 2 sixes will come out
+\begin{align}
+    Q_2 = (\frac{1}{6})^2 (\frac{5}{6})^{16} \times _{18}C_2 = 0.230 
+\end{align}
+\end{frame}
+
+\begin{frame}{SOLUTION}
+Probability that at least 3 sixes will come out
+\begin{align}
+   P_c = 1 - Q_0 - Q_1 - Q_2
+\end{align}
+\begin{align}
+   P_c = 1 - 0.38 - 0.135 - 0.230 = 0.597
+\end{align}
+ \begin{center}
+    P_a > P_b > P_c\\
+ \end{center}
+ 
+ \begin{center}
+    \boxed{\therefore $The most likely to happen is P_a$ } 
+ \end{center}
+
+
+\end{frame}
+\end{document}
